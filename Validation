@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <script>
+        function validateForm() {
+
+            let fname = document.forms["regForm"]["fname"].value;
+            let lname = document.forms["regForm"]["lname"].value;
+            let password = document.forms["regForm"]["password"].value;
+            let email = document.forms["regForm"]["email"].value;
+            let mobile = document.forms["regForm"]["mobile"].value;
+            let address = document.forms["regForm"]["address"].value;
+
+            // First Name validation
+            let namePattern = /^[A-Za-z]{3,}$/;
+            if (!namePattern.test(fname)) {
+                alert("First Name must contain only alphabets and at least 3 characters");
+                return false;
+            }
+
+            // Last Name check
+            if (lname == "") {
+                alert("Last Name cannot be empty");
+                return false;
+            }
+
+            // Password validation
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long");
+                return false;
+            }
+
+            // Email validation
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!emailPattern.test(email)) {
+                alert("Enter a valid Email ID");
+                return false;
+            }
+
+            // Mobile number validation
+            let mobilePattern = /^[0-9]{10}$/;
+            if (!mobilePattern.test(mobile)) {
+                alert("Mobile number must be exactly 10 digits");
+                return false;
+            }
+
+            // Address validation
+            if (address == "") {
+                alert("Address cannot be empty");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form name="regForm" onsubmit="return validateForm()">
+
+        First Name: <input type="text" name="fname"><br><br>
+
+        Last Name: <input type="text" name="lname"><br><br>
+
+        Password: <input type="password" name="password"><br><br>
+
+        Email: <input type="text" name="email"><br><br>
+
+        Mobile: <input type="text" name="mobile"><br><br>
+
+        Address: <textarea name="address"></textarea><br><br>
+
+        <input type="submit" value="Register">
+
+    </form>
+
+</body>
+</html>
