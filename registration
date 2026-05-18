@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information Form</title>
+
+    <script>
+        function showMessage() {
+            alert("Student Information Submitted Successfully!");
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Student Information Form</h2>
+
+    <form onsubmit="showMessage()">
+
+        <label>Name:</label>
+        <input type="text" name="name"><br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email"><br><br>
+
+        <label>Branch:</label>
+        <input type="text" name="branch"><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female<br><br>
+
+        <label>Address:</label><br>
+        <textarea rows="4" cols="30"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
