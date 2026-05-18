@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information Form</title>
+</head>
+<body>
+
+    <h2>Student Information Form</h2>
+
+    <form>
+        <label>Student Name:</label>
+        <input type="text" name="sname"><br><br>
+
+        <label>Register Number:</label>
+        <input type="text" name="regno"><br><br>
+
+        <label>Department:</label>
+        <input type="text" name="dept"><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female<br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email"><br><br>
+
+        <label>Phone Number:</label>
+        <input type="tel" name="phone"><br><br>
+
+        <label>Address:</label><br>
+        <textarea rows="4" cols="30"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
