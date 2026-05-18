@@ -1,0 +1,137 @@
+<!-- login.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+
+<h2>Login Page</h2>
+
+<form>
+    Username:
+    <input type="text" name="username"><br><br>
+
+    Password:
+    <input type="password" name="password"><br><br>
+
+    <input type="submit" value="Login">
+</form>
+
+</body>
+</html>
+
+
+<!-- home.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Book Store</title>
+</head>
+<body>
+
+<h1 style="text-align:center;">ONLINE BOOK STORE</h1>
+
+<table width="100%" height="500">
+<tr>
+
+<td width="20%" valign="top" bgcolor="#F2F2F2">
+
+    <h3>Menu</h3>
+
+    <a href="login.html" target="contentFrame">Login</a><br><br>
+
+    <a href="catalogue.html" target="contentFrame">Catalogue</a><br><br>
+
+    <a href="registration.html" target="contentFrame">Registration</a><br><br>
+
+</td>
+
+<td width="80%">
+
+    <iframe name="contentFrame"
+            width="100%"
+            height="500">
+    </iframe>
+
+</td>
+
+</tr>
+</table>
+
+</body>
+</html>
+
+
+<!-- catalogue.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Catalogue</title>
+</head>
+<body>
+
+<h2>Book Catalogue</h2>
+
+<table border="1" cellpadding="8" cellspacing="0">
+
+<tr>
+    <th>Book ID</th>
+    <th>Book Name</th>
+    <th>Author</th>
+    <th>Price</th>
+</tr>
+
+<tr>
+    <td>101</td>
+    <td>Java Programming</td>
+    <td>James Gosling</td>
+    <td>₹500</td>
+</tr>
+
+<tr>
+    <td>102</td>
+    <td>Python</td>
+    <td>Guido van Rossum</td>
+    <td>₹400</td>
+</tr>
+
+</table>
+
+</body>
+</html>
+
+<!-- registration.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+</head>
+<body>
+
+<h2>Registration Page</h2>
+
+<form>
+
+    Name:
+    <input type="text" name="name"><br><br>
+
+    Email:
+    <input type="email" name="email"><br><br>
+
+    Password:
+    <input type="password" name="password"><br><br>
+
+    Phone:
+    <input type="text" name="phone"><br><br>
+
+    <input type="submit" value="Register">
+
+</form>
+
+</body>
+</html>
