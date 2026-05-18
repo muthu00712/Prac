@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number to Words</title>
+
+    <script>
+
+        function convertToWords() {
+
+            let num = document.getElementById("number").value;
+
+            // Check empty input
+            if (num == "") {
+                alert("Please enter a number");
+                return;
+            }
+
+            // Restrict alphabets and special characters
+            if (!/^\d+$/.test(num)) {
+                alert("Only numbers are allowed");
+                return;
+            }
+
+            // Convert string to integer
+            num = parseInt(num);
+
+            // Check range
+            if (num < 0 || num > 999) {
+                alert("Enter number between 0 and 999");
+                return;
+            }
+
+            let ones = ["Zero","One","Two","Three","Four","Five",
+                        "Six","Seven","Eight","Nine","Ten","Eleven",
+                        "Twelve","Thirteen","Fourteen","Fifteen",
+                        "Sixteen","Seventeen","Eighteen","Nineteen"];
+
+            let tens = ["","","Twenty","Thirty","Forty",
+                        "Fifty","Sixty","Seventy","Eighty","Ninety"];
+
+            let word = "";
+
+            // Hundreds place
+            if (num >= 100) {
+                word += ones[Math.floor(num / 100)] + " Hundred ";
+                num = num % 100;
+            }
+
+            // Numbers from 20 to 99
+            if (num >= 20) {
+                word += tens[Math.floor(num / 10)] + " ";
+                num = num % 10;
+            }
+
+            // Numbers from 0 to 19
+            if (num > 0 || word == "") {
+                word += ones[num];
+            }
+
+            document.getElementById("result").innerHTML =
+                "<h3>" + word + "</h3>";
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h2>Number to Words Conversion</h2>
+
+    Enter Number:
+    <input type="text" id="number">
+
+    <button onclick="convertToWords()">Convert</button>
+
+    <div id="result"></div>
+
+</body>
+</html>
